@@ -1,0 +1,4 @@
+clock/__pycache__
+clock/tests
+clock/alarmdb.bin
+docs
