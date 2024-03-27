@@ -1,5 +1,5 @@
 import os
-from alarm_class import add_alarm
+from alarm_class import Alarm
 from validation import *
 import pickle
 
@@ -72,7 +72,7 @@ while True:
                     occurrence_validation('Set occurrence for alarm: ')
                     sound_validation('Select the sound just by pressing it\'s number:')
                     snooze_validation('Select the snooze time: ')
-                    add_alarm(d['title'], d['time'], d['occurrence'], d['sound'], d['snooze'])      # instantiation the alarm
+                    Alarm.add_alarm(d['title'], d['time'], d['occurrence'], d['sound'], d['snooze'])      # instantiation the alarm
                 elif add_modify_input == '2':
                     while True:
                         modify_input = input('Enter alarm title: ')

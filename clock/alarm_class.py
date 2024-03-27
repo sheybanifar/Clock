@@ -1,6 +1,6 @@
 
 from validation import d
-from os import system, path
+from os import system
 import pickle
 
 
@@ -16,8 +16,8 @@ class Alarm:
     def __str__(self):
         return self.title
     
-def add_alarm(title, time, occurrence, sound, snooze):
-        '''takes alarm parameters and creating alarm instance'''
+    def add_alarm(self, title, time, occurrence, sound, snooze):
+        '''takes alarm parameters and creates alarm instance'''
         with open('alarmdb.bin', 'rb') as alarmdb_reader:
             try:
                 alarm_list = pickle.load(alarmdb_reader)
